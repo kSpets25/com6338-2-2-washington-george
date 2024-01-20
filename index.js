@@ -10,7 +10,7 @@ function greet() {
     }
     var userAge = prompt("How old are you?");
         alert(parseInt(userAge, 10))
-    var userBirthYear = confirm ('Have you had a birthday in the last year?');
+    var userBirthYear = confirm ('Have you had a birthday this year?');
     if (userBirthYear) {
         const userBirthYear = (parseInt(userAge, 10) - new Date().getFullYear());
         alert('Your Birth Year is ' + userBirthYear)   
