@@ -5,24 +5,37 @@ function greet() {
     var userName = prompt('What is your name?');
     if (userName && userName.trim()) {
         alert('Hello, ' + userName + '!')
+        var userAge = prompt("How old are you?");
+        if (parseInt(userAge)) {
+            var userBirthYear = confirm ('Have you had a birthday this year?')
+            if (userBirthYear) {
+                var currentYear = new Date().getFullYear()
+                var birthYear = currentYear - parseInt(userAge);
+                alert('Your Birth year is: ' + birthYear);
+            } else {
+                var userAge = parseInt(userAge) + 1;
+                var birthYear = new Date().getFullYear() - parseInt(userAge);
+                alert('Your Birth year is: ' + birthYear);
+            }
+            if (birthYear - currentYear) {
+                alert('You have had a birthday!');
+        
+            } else {
+                alert('You have NOT had a birthday!');
+            }
+        } else {
+            alert('No user age enterd')
+        }
     } else {
-        alert('Hello, How are you?')
+        alert('Error, no valid name')
     }
-    var userAge = prompt("How old are you?");
-        alert(parseInt(userAge, 10))
-    var userBirthYear = confirm ('Have you had a birthday this year?');
-    if (userBirthYear) {
-        const userBirthYear = (parseInt(userAge, 10) - new Date().getFullYear());
-        alert('Your Birth Year is ' + userBirthYear)   
-    } else {
-        const userBirthDate = (parseInt(userAge, 10) - new Date().getFullYear());
-        alert('Your Birth Year is ' + userBirthYear)
-    }
+
+} 
 
     
     
         
         
     
-    }
+    
           
